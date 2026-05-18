@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cùng Học - Trang Học Tập</title>
+    <link rel="stylesheet" href="study.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                    <span>CÙNG HỌC</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" data-title="Trang chủ">Trang chủ</a>
+                <a href="study.html" class="active" data-title="Học tập">Học tập</a>
+                <a href="quiz.html" data-title="Trắc nghiệm">Trắc nghiệm</a>
+                <a href="contact.html" data-title="Liên hệ">Liên hệ</a>
+            </nav>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Tìm kiếm tài liệu, khóa học...">
+            </div>
+            <div class="header-actions">
+                <div class="placeholder-icon-book">
+                    <a href="login.html" data-title="Đăng nhập" class="login-btn">Đăng nhập</a>
+                </div>
+                <div class="user-avatar">
+                     <a href="profile.html">
+                    <img src="hailuu.jpg" alt="AVATAR"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    
+
+    <main class="container study-page-layout">
+        <aside class="sidebar-navigation">
+            <div class="nav-group beginner">
+                <div class="group-title"><i class="fa-solid fa-seedling"></i> NGƯỜI MỚI</div>
+                <a href="javascript:void(0)" class="nav-item active" data-target="beginner-path">Lộ trình căn bản</a>
+                <a href="javascript:void(0)" class="nav-item" data-target="beginner-course-root">Khóa học: Lấy lại gốc Tiếng Anh</a>
+                <a href="javascript:void(0)" class="nav-item" data-target="ipa-pronunciation">Phát âm chuẩn IPA Quốc Tế</a>
+                <a href="javascript:void(0)" class="nav-item" data-target="beginner-guide">Hướng dẫn học</a>
+            </div>
+
+            <div class="nav-group exam">
+                <div class="group-title"><i class="fa-solid fa-fire"></i> ÔN THI</div>
+                <a href="javascript:void(0)" class="nav-item" data-target="exam-thpt">Đề thi THPTQG</a>
+                <a href="javascript:void(0)" class="nav-item" data-target="exam-dgnl">Đề thi ĐGNL</a>
+            </div>
+
+            <div class="nav-group vocab">
+                <div class="group-title"><i class="fa-solid fa-book"></i> TỪ VỰNG</div>
+                <a href="javascript:void(0)" class="nav-item" data-target="vocab-3000">1000 từ thông dụng</a>
+                <a href="javascript:void(0)" class="nav-item" data-target="toeic-vocab">Từ vựng TOEIC</a>
+                <a href="javascript:void(0)" class="nav-item" data-target="ielts-vocab">Từ vựng IELTS</a>
+            </div>
+
+            <div class="nav-group tips-box">
+                <div class="group-title"><i class="fa-solid fa-lightbulb"></i> MẸO HỌC</div>
+                <div class="tip-content">Học ít nhưng đều đặn mỗi ngày tốt hơn học dồn vào cuối tuần!</div>
+            </div>
+        </aside>
+
+        <section class="main-content-display">
+            <div class="content-card">
+                <h2 id="current-title">Lộ trình căn bản</h2>
+                <div class="content-body" id="dynamic-content">
+                    <p>Lộ trình học tiếng Anh căn bản dành cho người mới bắt đầu.</p>
+                    <div class="image-slider dynamic-section">
+                        <div class="slider-wrapper">
+                            <img src="picture/lotrinh1.png" alt="Lộ trình 1" class="slide">
+                            <img src="picture/lotrinh2.png" alt="Lộ trình 2" class="slide">
+                            <img src="picture/lotrinh3.png" alt="Lộ trình 3" class="slide">
+                            <img src="picture/lotrinh4.png" alt="Lộ trình 4" class="slide">
+                            
+                        </div>
+                        <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+                    </div>
+                    <div class="lesson-info dynamic-section">
+                        <h3>Mục tiêu bài học:</h3>
+                        <ul>
+                            <li>Nắm vững 500 từ vựng cơ bản nhất.</li>
+                            <li>Làm quen với các dạng bài tập sơ cấp.</li>
+                            <li>Phát triển kỹ năng nghe và đọc hiểu cơ bản.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Nội dung Khóa học: Lấy lại gốc Tiếng Anh (Ẩn mặc định) -->
+                    <div id="beginner-course-root-content" class="dynamic-section" style="display: none;">
+                        <h3>Khóa học: Lấy lại gốc Tiếng Anh</h3>
+                        <p>Chào mừng bạn đến với khóa học "Lấy lại gốc Tiếng Anh"! Khóa học này được thiết kế để giúp bạn củng cố lại những kiến thức nền tảng quan trọng nhất, từ ngữ pháp cơ bản đến từ vựng thiết yếu, giúp bạn tự tin hơn trên hành trình học tiếng Anh.</p>
+                        <ul>
+                            <li>Ôn tập các thì cơ bản và cấu trúc câu.</li>
+                            <li>Học lại 500 từ vựng thông dụng nhất.</li>
+                            <li>Luyện tập nghe và nói ở trình độ sơ cấp.</li>
+                        </ul>
+                        <p class="guide-note">Hãy bắt đầu với các bài học về ngữ pháp và từ vựng để xây dựng nền tảng vững chắc.</p>
+
+                        <div class="lesson-list-wrapper">
+                            <h4>Danh sách bài học:</h4>
+                            <div class="lesson-nav-list">
+                                <div class="lesson-nav-item" data-video="picture/video1.mp4" data-title="Bài 1: Giới thiệu khóa học & Cách học hiệu quả">Bài 1: Giới thiệu khóa học & Cách học hiệu quả <i class="fa-solid fa-circle-play"></i></div>
+                                <div class="lesson-nav-item" data-video="picture/video1.mp4" data-title="Bài 2: Các thì cơ bản trong tiếng Anh">Bài 2: Các thì cơ bản trong tiếng Anh <i class="fa-solid fa-circle-play"></i></div>
+                                <div class="lesson-nav-item" data-video="picture/video1.mp4" data-title="Bài 3: 500 từ vựng thông dụng">Bài 3: 500 từ vựng thông dụng <i class="fa-solid fa-circle-play"></i></div>
+                                <div class="lesson-nav-item" data-video="picture/video1.mp4" data-title="Bài 4: Luyện nghe cơ bản">Bài 4: Luyện nghe cơ bản <i class="fa-solid fa-circle-play"></i></div>
+                                <div class="lesson-nav-item" data-video="picture/video1.mp4" data-title="Bài 5: Cấu trúc câu đơn giản">Bài 5: Cấu trúc câu đơn giản <i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+
+                            <div class="video-display-area" style="display: none;">
+                                <h5 class="playing-lesson-title"></h5>
+                                <div class="video-container">
+                                    <video id="root-video-player" controls></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nội dung Phát âm chuẩn IPA Quốc Tế (Ẩn mặc định) -->
+                    <div id="ipa-pronunciation-content" class="dynamic-section" style="display: none;">
+                        <h3>Phát âm chuẩn IPA Quốc Tế</h3>
+                        <p>Khóa học này sẽ hướng dẫn bạn cách phát âm chuẩn xác từng âm trong bảng phiên âm quốc tế IPA. Việc phát âm đúng là chìa khóa để nghe tốt và nói tự tin hơn.</p>
+                        <ul>
+                            <li>Tìm hiểu 44 âm trong bảng IPA (nguyên âm, phụ âm).</li>
+                            <li>Luyện tập cách đặt lưỡi, môi và hơi thở cho từng âm.</li>
+                            <li>Thực hành phát âm các từ và câu có chứa các âm đã học.</li>
+                        </ul>
+                        <p class="guide-note">Luyện tập thường xuyên với các bài tập nghe và lặp lại để cải thiện phát âm.</p>
+
+                        <div class="lesson-list-wrapper">
+                            <h4>Danh sách bài học:</h4>
+                            <div class="lesson-nav-list">
+                                <div class="lesson-nav-item" data-video="picture/video1.mp4" data-title="Bài 1: Giới thiệu bảng IPA & Nguyên âm đơn">Bài 1: Giới thiệu bảng IPA & Nguyên âm đơn <i class="fa-solid fa-circle-play"></i></div>
+                                <div class="lesson-nav-item" data-video="picture/video1.mp4" data-title="Bài 2: Nguyên âm đôi">Bài 2: Nguyên âm đôi <i class="fa-solid fa-circle-play"></i></div>
+                                <div class="lesson-nav-item" data-video="picture/video1.mp4" data-title="Bài 3: Phụ âm">Bài 3: Phụ âm <i class="fa-solid fa-circle-play"></i></div>
+                                <div class="lesson-nav-item" data-video="picture/video1.mp4" data-title="Bài 4: Trọng âm & Ngữ điệu">Bài 4: Trọng âm & Ngữ điệu <i class="fa-solid fa-circle-play"></i></div>
+                                <div class="lesson-nav-item" data-video="picture/video1.mp4" data-title="Bài 5: Luyện tập tổng hợp">Bài 5: Luyện tập tổng hợp <i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+
+                            <div class="video-display-area" style="display: none;">
+                                <h5 class="playing-lesson-title"></h5>
+                                <div class="video-container">
+                                    <video id="ipa-video-player" controls></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nội dung Hướng dẫn học (Ẩn mặc định) -->
+                    <div id="guide-content" class="guide-container dynamic-section" style="display: none;">
+                        <h3>Cách học tiếng Anh hiệu quả</h3>
+                        <p>Để học tiếng Anh tốt, bạn cần phát triển đồng đều các kỹ năng như phát âm, từ vựng, ngữ pháp, nghe và nói. Quan trọng hơn, bạn phải duy trì việc học đều đặn và có phương pháp phù hợp.</p>
+
+                        <div class="guide-section">
+                            <h4>1. Phát âm (Pronunciation)</h4>
+                            <ul>
+                                <li>Hãy bắt đầu với 44 âm trong bảng phiên âm quốc tế (IPA).</li>
+                                <li>Luyện nghe và lặp lại (shadowing) theo người bản xứ.</li>
+                                <li>Ghi âm giọng nói và so sánh để nhận ra lỗi sai.</li>
+                            </ul>
+                            <div class="guide-note"> Luyện phát âm mỗi ngày 10–15 phút sẽ giúp bạn tiến bộ rõ rệt.</div>
+                        </div>
+
+                        <div class="guide-section">
+                            <h4>2. Từ vựng (Vocabulary)</h4>
+                            <ul>
+                                <li>Học theo chủ đề và ngữ cảnh, thay vì học riêng lẻ.</li>
+                                <li>Đặt câu với mỗi từ mới để ghi nhớ lâu hơn.</li>
+                                <li>Mục tiêu ban đầu là khoảng 3000 từ thông dụng.</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-section">
+                            <h4>3. Ngữ pháp (Grammar)</h4>
+                            <p>Tập trung vào các thì cơ bản: Hiện tại đơn, Quá khứ đơn, Tương lai đơn. Hãy học ít nhưng hiểu sâu và áp dụng vào thực tế hàng ngày.</p>
+                        </div>
+
+                        <div class="guide-section">
+                            <h4>4. Kỹ năng nghe và nói (Listening & Speaking)</h4>
+                            <p><strong>Nghe:</strong> Podcast, phim, video tiếng Anh mỗi ngày. Thử phương pháp nghe chép chính tả.</p>
+                            <p><strong>Nói:</strong> Nói một mình (self-talk) hoặc tìm bạn học cùng. Đừng chờ giỏi mới nói!</p>
+                        </div>
+
+                        <div class="guide-section">
+                            <h4>5. Tài nguyên học tập</h4>
+                            <p>Tận dụng YouTube, Podcast và các ứng dụng học tập. Chọn nội dung bạn yêu thích để không bị chán.</p>
+                        </div>
+
+                        <div class="guide-section">
+                            <h4>6. Lập kế hoạch học tập</h4>
+                            <ul>
+                                <li>10 phút từ vựng</li>
+                                <li>10 phút nghe</li>
+                                <li>10 phút nói</li>
+                            </ul>
+                            <div class="guide-note">Học mỗi ngày 20-30 phút hiệu quả hơn học 3-4 tiếng rồi bỏ.</div>
+                        </div>
+
+                        <div class="guide-section">
+                            <h4>7. Kiên trì và tạo thói quen</h4>
+                            <ul>
+                                <li>Đổi ngôn ngữ điện thoại sang tiếng Anh.</li>
+                                <li>Suy nghĩ bằng tiếng Anh bất cứ khi nào có thể.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Danh sách đề thi THPTQG (6 cards) -->
+                    <div id="exam-thpt-content" class="exam-grid dynamic-section" style="display: none;">
+                        <div class="exam-card">
+                            <div class="exam-thumbnail"><img src="picture/thumbnail_exam.png" alt="THPT"></div>
+                            <div class="exam-info-card">
+                                <h4 class="exam-title">Đề thi thử THPTQG lần 1 - TP. Hà Nội</h4>
+                                <a href="https://vnexpress.net/24-ma-de-thi-toan-tot-nghiep-thpt-2025-4906252.html" class="btn-view" target="_blank">Xem ngay</a>
+                            </div>
+                        </div>
+                        <div class="exam-card">
+                            <div class="exam-thumbnail"><img src="picture/thumbnail_exam.png" alt="THPT"></div>
+                            <div class="exam-info-card">
+                                <h4 class="exam-title">Đề thi chính thức THPTQG - Năm 2023</h4>
+                                <a href="https://vnexpress.net/24-ma-de-thi-toan-tot-nghiep-thpt-2025-4906252.html" class="btn-view" target="_blank">Xem ngay</a>
+                            </div>
+                        </div>
+                        <div class="exam-card">
+                            <div class="exam-thumbnail"><img src="picture/thumbnail_exam.png" alt="THPT"></div>
+                            <div class="exam-info-card">
+                                <h4 class="exam-title">Đề ôn tập chuyên đề Ngữ Pháp trọng tâm</h4>
+                                <a href="https://vnexpress.net/24-ma-de-thi-toan-tot-nghiep-thpt-2025-4906252.html" class="btn-view" target="_blank">Xem ngay</a>
+                            </div>
+                        </div>
+                        <div class="exam-card">
+                            <div class="exam-thumbnail"><img src="picture/thumbnail_exam.png" alt="THPT"></div>
+                            <div class="exam-info-card">
+                                <h4 class="exam-title">Đề thi thử THPTQG lần 2 - TP. Hà Nội</h4>
+                                <a href="https://vnexpress.net/24-ma-de-thi-toan-tot-nghiep-thpt-2025-4906252.html" class="btn-view" target="_blank">Xem ngay</a>
+                            </div>
+                        </div>
+                        <div class="exam-card">
+                            <div class="exam-thumbnail"><img src="picture/thumbnail_exam.png" alt="THPT"></div>
+                            <div class="exam-info-card">
+                                <h4 class="exam-title">Bộ đề dự đoán THPTQG 2024</h4>
+                                <a href="https://vnexpress.net/24-ma-de-thi-toan-tot-nghiep-thpt-2025-4906252.html" class="btn-view" target="_blank">Xem ngay</a>
+                            </div>
+                        </div>
+                        <div class="exam-card">
+                            <div class="exam-thumbnail"><img src="picture/thumbnail_exam.png" alt="THPT"></div>
+                            <div class="exam-info-card">
+                                <h4 class="exam-title">Đề thi thử cụm các trường chuyên</h4>
+                                <a href="https://vnexpress.net/24-ma-de-thi-toan-tot-nghiep-thpt-2025-4906252.html" class="btn-view" target="_blank">Xem ngay</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Danh sách đề thi DGNL (3 cards) -->
+                    <div id="exam-dgnl-content" class="exam-grid dynamic-section" style="display: none;">
+                        <div class="exam-card">
+                            <div class="exam-thumbnail"><img src="picture/thumbnail_exam.png" alt="DGNL"></div>
+                            <div class="exam-info-card">
+                                <h4 class="exam-title">Đề thi thử DGNL lần 1 - TP. Hà Nội</h4>
+                                <a href="https://vnexpress.net/24-ma-de-thi-toan-tot-nghiep-thpt-2025-4906252.html" class="btn-view" target="_blank">Xem ngay</a>
+                            </div>
+                        </div>
+                        <div class="exam-card">
+                            <div class="exam-thumbnail"><img src="picture/thumbnail_exam.png" alt="DGNL"></div>
+                            <div class="exam-info-card">
+                                <h4 class="exam-title">Đề thi ĐGNL ĐHQG TP.HCM - Năm 2023</h4>
+                                <a href="https://vnexpress.net/24-ma-de-thi-toan-tot-nghiep-thpt-2025-4906252.html" class="btn-view" target="_blank">Xem ngay</a>
+                            </div>
+                        </div>
+                        <div class="exam-card">
+                            <div class="exam-thumbnail"><img src="picture/thumbnail_exam.png" alt="DGNL"></div>
+                            <div class="exam-info-card">
+                                <h4 class="exam-title">Đề minh họa ĐGNL ĐHQG Hà Nội</h4>
+                                <a href="https://vnexpress.net/24-ma-de-thi-toan-tot-nghiep-thpt-2025-4906252.html" class="btn-view" target="_blank">Xem ngay</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Danh sách 3000 từ cốt lõi (6 cards) - Mặc định ẩn -->
+                    <div id="vocab-3000-content" class="vocab-grid dynamic-section" style="display: none;">
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/vocab_unit1.png" alt="Unit 1"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">Unit 1: Gia đình & Bạn bè</h4>
+                                <p class="vocab-description">Học 20 từ vựng cơ bản về các mối quan hệ.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 30%;"></div>
+                                    <span class="progress-text">30%</span>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-learn-now" data-source="data-unit1">Học ngay</a>
+                            </div>
+                        </div>
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/vocab_unit2.png" alt="Unit 2"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">Unit 2: Trường học & Giáo dục</h4>
+                                <p class="vocab-description">Học 25 từ vựng thông dụng trong môi trường học tập.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 60%;"></div>
+                                    <span class="progress-text">60%</span>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-learn-now" data-source="data-unit2">Học ngay</a>
+                            </div>
+                        </div>
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/vocab_unit3.png" alt="Unit 3"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">Unit 3: Công việc & Nghề nghiệp</h4>
+                                <p class="vocab-description">Khám phá 30 từ vựng về các ngành nghề khác nhau.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 10%;"></div>
+                                    <span class="progress-text">10%</span>
+                                </div>
+                                <a href="vocab-detail.html?unit=3" class="btn-learn-now">Học ngay</a>
+                            </div>
+                        </div>
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/vocab_unit1.png" alt="Unit 4"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">Unit 4: Du lịch & Khám phá</h4>
+                                <p class="vocab-description">Học 22 từ vựng cần thiết cho chuyến đi.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 80%;"></div>
+                                    <span class="progress-text">80%</span>
+                                </div>
+                                <a href="vocab-detail.html?unit=4" class="btn-learn-now">Học ngay</a>
+                            </div>
+                        </div>
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/vocab_unit1.png" alt="Unit 5"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">Unit 5: Ẩm thực & Nhà hàng</h4>
+                                <p class="vocab-description">Tìm hiểu 28 từ vựng về đồ ăn và dịch vụ.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 45%;"></div>
+                                    <span class="progress-text">45%</span>
+                                </div>
+                                <a href="vocab-detail.html?unit=5" class="btn-learn-now">Học ngay</a>
+                            </div>
+                        </div>
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/vocab_unit1.png" alt="Unit 6"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">Unit 6: Sức khỏe & Y tế</h4>
+                                <p class="vocab-description">Nắm vững 27 từ vựng liên quan đến sức khỏe.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 100%;"></div>
+                                    <span class="progress-text">100%</span>
+                                </div>
+                                <a href="vocab-detail.html?unit=6" class="btn-learn-now">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Danh sách Từ vựng TOEIC (Nội dung từ index.html) - Mặc định ẩn -->
+                    <div id="toeic-vocab-content" class="vocab-grid dynamic-section" style="display: none;">
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/thumbnail_exam.png" alt="TOEIC"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">TOEIC 0-500+</h4>
+                                <p class="vocab-description">Lộ trình học 50 bộ từ vựng căn bản giúp bạn chinh phục cột mốc 500+.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 10%;"></div>
+                                    <span class="progress-text">10%</span>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-learn-now" data-source="data-toeic-500">Học ngay</a>
+                            </div>
+                        </div>
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/thumbnail_exam.png" alt="TOEIC"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">HACKERS TOEIC VOCAB</h4>
+                                <p class="vocab-description">Tóm tắt 30 bài học từ vựng quan trọng từ bộ sách Hackers TOEIC.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 5%;"></div>
+                                    <span class="progress-text">5%</span>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-learn-now" data-source="data-toeic-hackers">Học ngay</a>
+                            </div>
+                        </div>
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/thumbnail_exam.png" alt="TOEIC"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">ETS 2026 VOCABULARY</h4>
+                                <p class="vocab-description">Cập nhật 20 bộ từ vựng sát đề thi thực tế mới nhất từ ETS.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 0%;"></div>
+                                    <span class="progress-text">0%</span>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-learn-now" data-source="data-toeic-ets">Học ngay</a>
+                            </div>
+                        </div>
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/thumbnail_exam.png" alt="TOEIC"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">TOEIC Listening Practice</h4>
+                                <p class="vocab-description">22 bộ từ vựng luyện nghe chuyên sâu giúp cải thiện điểm Listening.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 0%;"></div>
+                                    <span class="progress-text">0%</span>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-learn-now" data-source="data-toeic-listening">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Danh sách Từ vựng IELTS (Nội dung từ index.html) - Mặc định ẩn -->
+                    <div id="ielts-vocab-content" class="vocab-grid dynamic-section" style="display: none;">
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/thumbnail_exam.png" alt="IELTS"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">Vocabulary In Use Elementary</h4>
+                                <p class="vocab-description">Học 50 bộ từ vựng căn bản cho người mới bắt đầu.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 10%;"></div>
+                                    <span class="progress-text">10%</span>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-learn-now" data-source="data-ielts-elementary">Học ngay</a>
+                            </div>
+                        </div>
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/thumbnail_exam.png" alt="IELTS"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">Cambridge Practice IELTS (18-20)</h4>
+                                <p class="vocab-description">30 bộ từ vựng từ các đề thi Cambridge mới nhất.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 75%;"></div>
+                                    <span class="progress-text">75%</span>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-learn-now" data-source="data-ielts-cambridge">Học ngay</a>
+                            </div>
+                        </div>
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/thumbnail_exam.png" alt="IELTS"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">Vocabulary in Use - Advanced</h4>
+                                <p class="vocab-description">101 bộ từ vựng nâng cao chinh phục mục tiêu 8.0+.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 40%;"></div>
+                                    <span class="progress-text">40%</span>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-learn-now" data-source="data-ielts-advanced">Học ngay</a>
+                            </div>
+                        </div>
+                        <div class="vocab-card">
+                            <div class="vocab-thumbnail"><img src="picture/thumbnail_exam.png" alt="IELTS"></div>
+                            <div class="vocab-info-card">
+                                <h4 class="vocab-title">IELTS theo chủ đề</h4>
+                                <p class="vocab-description">107 bộ từ vựng luyện thi chuyên sâu theo chủ đề.</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 20%;"></div>
+                                    <span class="progress-text">20%</span>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-learn-now" data-source="data-ielts-topic">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khu vực Flashcards (Ẩn mặc định) -->
+                    <div id="flashcard-section" class="dynamic-section" style="display: none;">
+                        <ul id="flashcard-data-source" style="display: none;">
+                            <li data-en="Family" data-vi="Gia đình" data-ipa="/ˈfæm.əl.i/" data-ex="I love my family very much." data-ex-vi="Tôi rất yêu gia đình của mình." data-img="picture/topic_family.png"></li>
+                            <li data-en="Education" data-vi="Giáo dục" data-ipa="/ˌedʒ.ʊˈkeɪ.ʃən/" data-ex="Education is very important." data-ex-vi="Giáo dục rất quan trọng." data-img="picture/vocab_unit2.png"></li>
+                            <li data-en="Travel" data-vi="Du lịch" data-ipa="/ˈtræv.əl/" data-ex="I want to travel around the world." data-ex-vi="Tôi muốn đi du lịch vòng quanh thế giới." data-img="picture/topic_travel.png"></li>
+                            <li data-en="Health" data-vi="Sử khỏe" data-ipa="/helθ/" data-ex="Health is better than wealth." data-ex-vi="Sức khỏe quý hơn vàng." data-img="picture/topic_health.png"></li>
+                            <li data-en="Technology" data-vi="Công nghệ" data-ipa="/tekˈnɒl.ə.dʒi/" data-ex="Technology changes the world." data-ex-vi="Công nghệ thay đổi thế giới." data-img="picture/topic_tech.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu cho Unit 1: Gia đình & Bạn bè -->
+                        <ul id="data-unit1" style="display: none;">
+                            <li data-en="Friend" data-vi="Bạn bè" data-ipa="/frend/" data-pos="n" data-ex="She is my best friend." data-ex-vi="Cô ấy là bạn thân nhất của tôi." data-img="picture/vocab_unit1.png"></li>
+                            <li data-en="Relative" data-vi="Họ hàng" data-ipa="/ˈrel.ə.tɪv/" data-pos="n" data-ex="All my relatives came to the party." data-ex-vi="Tất cả họ hàng của tôi đã đến bữa tiệc." data-img="picture/vocab_unit1.png"></li>
+                            <li data-en="Neighbor" data-vi="Hàng xóm" data-ipa="/ˈneɪ.bər/" data-pos="n" data-ex="Our neighbors are very friendly." data-ex-vi="Hàng xóm của chúng tôi rất thân thiện." data-img="picture/vocab_unit1.png"></li>
+                            <li data-en="Childhood" data-vi="Tuổi thơ" data-ipa="/ˈtʃaɪld.hʊd/" data-pos="n" data-ex="I had a happy childhood." data-ex-vi="Tôi đã có một tuổi thơ hạnh phúc." data-img="picture/vocab_unit1.png"></li>
+                            <li data-en="Relationship" data-vi="Mối quan hệ" data-ipa="/rɪˈleɪ.ʃən.ʃɪp/" data-pos="n" data-ex="They have a good relationship." data-ex-vi="Họ có một mối quan hệ tốt đẹp." data-img="picture/vocab_unit1.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu cho Unit 2: Trường học & Giáo dục -->
+                        <ul id="data-unit2" style="display: none;">
+                            <li data-en="Student" data-vi="Học sinh" data-ipa="/ˈstjuː.dənt/" data-pos="n" data-ex="The student is studying hard." data-ex-vi="Học sinh đang học tập chăm chỉ." data-img="picture/vocab_unit2.png"></li>
+                            <li data-en="Homework" data-vi="Bài tập về nhà" data-ipa="/ˈhəʊm.wɜːk/" data-pos="n" data-ex="I must do my homework." data-ex-vi="Tôi phải làm bài tập về nhà." data-img="picture/vocab_unit2.png"></li>
+                            <li data-en="Library" data-vi="Thư viện" data-ipa="/ˈlaɪ.brər.i/" data-pos="n" data-ex="I often study in the library." data-ex-vi="Tôi thường xuyên học trong thư viện." data-img="picture/vocab_unit2.png"></li>
+                            <li data-en="Subject" data-vi="Môn học" data-ipa="/ˈsʌb.dʒekt/" data-pos="n" data-ex="Math is my favorite subject." data-ex-vi="Toán là môn học yêu thích của tôi." data-img="picture/vocab_unit2.png"></li>
+                            <li data-en="Exam" data-vi="Kỳ thi" data-ipa="/ɪɡˈzæm/" data-pos="n" data-ex="I have an English exam tomorrow." data-ex-vi="Tôi có một kỳ thi tiếng Anh vào ngày mai." data-img="picture/vocab_unit2.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu cho chủ đề Family -->
+                        <ul id="data-family" style="display: none;">
+                            <li data-en="Father" data-vi="Bố/Cha" data-ipa="/ˈfɑː.ðər/" data-ex="My father is a doctor." data-ex-vi="Bố tôi là bác sĩ." data-img="picture/topic_family.png"></li>
+                            <li data-en="Mother" data-vi="Mẹ" data-ipa="/ˈmʌð.ər/" data-ex="My mother is a great cook." data-ex-vi="Mẹ tôi là một đầu bếp tuyệt vời." data-img="picture/topic_family.png"></li>
+                            <li data-en="Brother" data-vi="Anh/Em trai" data-ipa="/ˈbrʌð.ər/" data-ex="I have one older brother." data-ex-vi="Tôi có một người anh trai." data-img="picture/topic_family.png"></li>
+                            <li data-en="Sister" data-vi="Chị/Em gái" data-ipa="/ˈsɪs.tər/" data-ex="My sister is a student." data-ex-vi="Em gái tôi là sinh viên." data-img="picture/topic_family.png"></li>
+                            <li data-en="Grandparents" data-vi="Ông bà" data-ipa="/ˈɡræn.peə.rənts/" data-ex="I visit my grandparents." data-ex-vi="Tôi đi thăm ông bà của mình." data-img="picture/topic_family.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu cho chủ đề Jobs -->
+                        <ul id="data-jobs" style="display: none;">
+                            <li data-en="Doctor" data-vi="Bác sĩ" data-ipa="/ˈdɒk.tər/" data-ex="The doctor helps patients." data-ex-vi="Bác sĩ giúp đỡ bệnh nhân." data-img="picture/topic_jobs.png"></li>
+                            <li data-en="Teacher" data-vi="Giáo viên" data-ipa="/ˈtiː.tʃər/" data-ex="The teacher is in the class." data-ex-vi="Giáo viên đang ở trong lớp." data-img="picture/topic_jobs.png"></li>
+                            <li data-en="Engineer" data-vi="Kỹ sư" data-ipa="/ˌen.dʒɪˈnɪər/" data-ex="He is a civil engineer." data-ex-vi="Anh ấy là một kỹ sư xây dựng." data-img="picture/topic_jobs.png"></li>
+                            <li data-en="Farmer" data-vi="Nông dân" data-ipa="/ˈfɑː.mər/" data-ex="The farmer works on the farm." data-ex-vi="Người nông dân làm việc trên nông trại." data-img="picture/topic_jobs.png"></li>
+                            <li data-en="Singer" data-vi="Ca sĩ" data-ipa="/ˈsɪŋ.ər/" data-ex="She is a famous singer." data-ex-vi="Cô ấy là một ca sĩ nổi tiếng." data-img="picture/topic_jobs.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu TOEIC 0-500+ -->
+                        <ul id="data-toeic-500" style="display: none;">
+                            <li data-en="Contract" data-vi="Hợp đồng" data-ipa="/ˈkɒn.trækt/" data-pos="n" data-ex="They signed a new contract." data-ex-vi="Họ đã ký một hợp đồng mới." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Policy" data-vi="Chính sách" data-ipa="/ˈpɒl.ə.si/" data-pos="n" data-ex="Please read the company policy." data-ex-vi="Vui lòng đọc chính sách công ty." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Benefit" data-vi="Lợi ích" data-ipa="/ˈben.ɪ.fɪt/" data-pos="n" data-ex="The new plan has many benefits." data-ex-vi="Kế hoạch mới có nhiều lợi ích." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Submit" data-vi="Nộp/Đệ trình" data-ipa="/səbˈmɪt/" data-pos="v" data-ex="Submit your report by Friday." data-ex-vi="Hãy nộp báo cáo trước thứ Sáu." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Notify" data-vi="Thông báo" data-ipa="/ˈnəʊ.tɪ.faɪ/" data-pos="v" data-ex="We will notify you of the result." data-ex-vi="Chúng tôi sẽ thông báo kết quả cho bạn." data-img="picture/thumbnail_exam.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu HACKERS TOEIC VOCAB -->
+                        <ul id="data-toeic-hackers" style="display: none;">
+                            <li data-en="Implement" data-vi="Triển khai" data-ipa="/ˈɪm.plɪ.ment/" data-pos="v" data-ex="We need to implement the strategy." data-ex-vi="Chúng ta cần triển khai chiến lược." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Procedure" data-vi="Thủ tục" data-ipa="/prəˈsiː.dʒər/" data-pos="n" data-ex="Follow the safety procedure." data-ex-vi="Tuân theo quy trình an toàn." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Comply" data-vi="Tuân thủ" data-ipa="/kəmˈplaɪ/" data-pos="v" data-ex="All staff must comply with regulations." data-ex-vi="Nhân viên phải tuân thủ quy định." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Objective" data-vi="Mục tiêu" data-ipa="/əbˈdʒek.tɪv/" data-pos="n" data-ex="What is your main objective?" data-ex-vi="Mục tiêu chính của bạn là gì?" data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Strategy" data-vi="Chiến lược" data-ipa="/ˈstræt.ə.dʒi/" data-pos="n" data-ex="The marketing strategy worked well." data-ex-vi="Chiến lược tiếp thị đã hiệu quả." data-img="picture/thumbnail_exam.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu ETS 2026 VOCABULARY -->
+                        <ul id="data-toeic-ets" style="display: none;">
+                            <li data-en="Invoice" data-vi="Hóa đơn" data-ipa="/ˈɪn.vɔɪs/" data-pos="n" data-ex="Send the invoice to accounting." data-ex-vi="Gửi hóa đơn cho bộ phận kế toán." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Inventory" data-vi="Hàng tồn kho" data-ipa="/ˈɪn.vən.tər.i/" data-pos="n" data-ex="Check the inventory levels." data-ex-vi="Kiểm tra mức hàng tồn kho." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Vendor" data-vi="Nhà cung cấp" data-ipa="/ˈven.dər/" data-pos="n" data-ex="The vendor delivered the goods." data-ex-vi="Nhà cung cấp đã giao hàng." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Dispatch" data-vi="Gửi đi/Điều động" data-ipa="/dɪˈspætʃ/" data-pos="v" data-ex="Orders are dispatched within 24 hours." data-ex-vi="Đơn hàng được gửi đi trong 24 giờ." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Remittance" data-vi="Sự chuyển tiền" data-ipa="/rɪˈmɪt.əns/" data-pos="n" data-ex="Please confirm the remittance." data-ex-vi="Vui lòng xác nhận việc chuyển tiền." data-img="picture/thumbnail_exam.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu TOEIC Listening Practice -->
+                        <ul id="data-toeic-listening" style="display: none;">
+                            <li data-en="Announcement" data-vi="Thông báo" data-ipa="/əˈnaʊns.mənt/" data-pos="n" data-ex="Listen to the airport announcement." data-ex-vi="Nghe thông báo tại sân bay." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Itinerary" data-vi="Lịch trình" data-ipa="/aɪˈtɪn.ər.ər.i/" data-pos="n" data-ex="The itinerary includes three stops." data-ex-vi="Hành trình bao gồm ba điểm dừng." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Reservation" data-vi="Sự đặt chỗ" data-ipa="/ˌrez.əˈveɪ.ʃən/" data-pos="n" data-ex="I have a dinner reservation." data-ex-vi="Tôi có một cuộc hẹn ăn tối đã đặt trước." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Platform" data-vi="Sân ga" data-ipa="/ˈplæt.fɔːm/" data-pos="n" data-ex="The train leaves from platform 4." data-ex-vi="Tàu rời đi từ sân ga số 4." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Conductor" data-vi="Người soát vé/Người chỉ huy" data-ipa="/kənˈdʌk.tər/" data-pos="n" data-ex="The conductor checked the tickets." data-ex-vi="Người soát vé đã kiểm tra vé." data-img="picture/thumbnail_exam.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu IELTS Elementary -->
+                        <ul id="data-ielts-elementary" style="display: none;">
+                            <li data-en="Acquire" data-vi="Đạt được/Thu nhận" data-ipa="/əˈkwaɪər/" data-pos="v" data-ex="She managed to acquire a new skill." data-ex-vi="Cô ấy đã xoay sở để học được một kỹ năng mới." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Analyze" data-vi="Phân tích" data-ipa="/ˈæn.əl.aɪz/" data-pos="v" data-ex="We need to analyze the data." data-ex-vi="Chúng ta cần phân tích dữ liệu." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Approach" data-vi="Tiếp cận" data-ipa="/əˈprəʊtʃ/" data-pos="n" data-ex="The new approach was successful." data-ex-vi="Cách tiếp cận mới đã thành công." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Benefit" data-vi="Lợi ích" data-ipa="/ˈben.ɪ.fɪt/" data-pos="n" data-ex="There are many benefits to exercise." data-ex-vi="Có rất nhiều lợi ích từ việc tập thể dục." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Complex" data-vi="Phức tạp" data-ipa="/ˈkɒm.pleks/" data-pos="adj" data-ex="The problem is very complex." data-ex-vi="Vấn đề này rất phức tạp." data-img="picture/thumbnail_exam.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu Cambridge Practice IELTS -->
+                        <ul id="data-ielts-cambridge" style="display: none;">
+                            <li data-en="Coherent" data-vi="Mạch lạc" data-ipa="/kəʊˈhɪə.rənt/" data-pos="adj" data-ex="The argument was coherent and logical." data-ex-vi="Lập luận rất mạch lạc và logic." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Consecutive" data-vi="Liên tiếp" data-ipa="/kənˈsek.jə.tɪv/" data-pos="adj" data-ex="It rained for three consecutive days." data-ex-vi="Trời mưa trong ba ngày liên tiếp." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Contradict" data-vi="Mâu thuẫn/Phủ nhận" data-ipa="/ˌkɒn.trəˈdɪkt/" data-pos="v" data-ex="The two reports contradict each other." data-ex-vi="Hai bản báo cáo mâu thuẫn với nhau." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Deteriorate" data-vi="Sụt giảm/Xấu đi" data-ipa="/dɪˈtɪə.ri.ə.reɪt/" data-pos="v" data-ex="His health began to deteriorate." data-ex-vi="Sức khỏe của anh ấy bắt đầu xấu đi." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Equivocal" data-vi="Lờ mờ/Không rõ rệt" data-ipa="/ɪˈkwɪv.ə.kəl/" data-pos="adj" data-ex="His reply was equivocal." data-ex-vi="Câu trả lời của anh ấy không rõ ràng." data-img="picture/thumbnail_exam.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu IELTS Advanced -->
+                        <ul id="data-ielts-advanced" style="display: none;">
+                            <li data-en="Ambiguous" data-vi="Mơ hồ" data-ipa="/æmˈbɪɡ.ju.əs/" data-pos="adj" data-ex="The wording of the law is ambiguous." data-ex-vi="Cách dùng từ của bộ luật này rất mơ hồ." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Comprehensive" data-vi="Toàn diện" data-ipa="/ˌkɒm.prɪˈhen.sɪv/" data-pos="adj" data-ex="The report is quite comprehensive." data-ex-vi="Bản báo cáo này khá toàn diện." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Exacerbate" data-vi="Làm trầm trọng thêm" data-ipa="/ɪɡˈzæs.ə.beɪt/" data-pos="v" data-ex="The crisis was exacerbated by the weather." data-ex-vi="Cuộc khủng hoảng trầm trọng hơn do thời tiết." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Inherent" data-vi="Vốn có" data-ipa="/ɪnˈhɪə.rənt/" data-pos="adj" data-ex="There are inherent risks in this plan." data-ex-vi="Có những rủi ro vốn có trong kế hoạch này." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Pragmatic" data-vi="Thực dụng/Thực tế" data-ipa="/præɡˈmæt.ɪk/" data-pos="adj" data-ex="She took a pragmatic approach to the problem." data-ex-vi="Cô ấy đã chọn cách tiếp cận thực tế cho vấn đề." data-img="picture/thumbnail_exam.png"></li>
+                        </ul>
+
+                        <!-- Dữ liệu IELTS theo chủ đề -->
+                        <ul id="data-ielts-topic" style="display: none;">
+                            <li data-en="Sustainable" data-vi="Bền vững" data-ipa="/səˈsteɪ.nə.bəl/" data-pos="adj" data-ex="We need sustainable development." data-ex-vi="Chúng ta cần phát triển bền vững." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Diversity" data-vi="Sự đa dạng" data-ipa="/daɪˈvɜː.sə.ti/" data-pos="n" data-ex="Cultural diversity is important." data-ex-vi="Sự đa dạng văn hóa rất quan trọng." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Innovation" data-vi="Sự đổi mới" data-ipa="/ˌɪn.əˈveɪ.ʃən/" data-pos="n" data-ex="Innovation drives economic growth." data-ex-vi="Sự đổi mới thúc đẩy tăng trưởng kinh tế." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Infrastructure" data-vi="Cơ sở hạ tầng" data-ipa="/ˈɪn.frəˌstrʌk.tʃər/" data-pos="n" data-ex="The city's infrastructure is aging." data-ex-vi="Cơ sở hạ tầng của thành phố đang xuống cấp." data-img="picture/thumbnail_exam.png"></li>
+                            <li data-en="Mitigate" data-vi="Giảm nhẹ" data-ipa="/ˈmɪt.ɪ.ɡeɪt/" data-pos="v" data-ex="Steps were taken to mitigate the risk." data-ex-vi="Các bước đã được thực hiện để giảm nhẹ rủi ro." data-img="picture/thumbnail_exam.png"></li>
+                        </ul>
+
+                        <div class="flashcard-container">
+                            <div class="flashcard" id="flashcard">
+                                <!-- Mặt trước -->
+                                <div class="flashcard-front">
+                                    <img src="" alt="Illustration" id="card-img">
+                                    <h2 id="card-en"></h2>
+                                    <p class="ipa" id="card-ipa"></p>
+                                    <button class="audio-btn" onclick="playSound()"><i class="fa-solid fa-volume-high"></i></button>
+                                </div>
+                                <!-- Mặt sau -->
+                                <div class="flashcard-back">
+                                    <h2 id="card-vi"></h2>
+                                    <p class="example" id="card-ex"></p>
+                                    <p class="example-vi" id="card-ex-vi"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flashcard-controls">
+                            <button id="prev-card" class="btn-ctrl">Trở về</button>
+                            <span id="card-counter">1/5</span>
+                            <button id="next-card" class="btn-ctrl">Kế tiếp</button>
+                            <button id="exit-flashcard" class="btn-ctrl">Thoát</button>
+                        </div>
+
+                        <!-- Bảng tổng hợp từ vựng -->
+                        <div class="vocab-table-container">
+                            <h3 class="table-title">Danh sách từ vựng</h3>
+                            <table class="vocab-table">
+                                <thead>
+                                    <tr>
+                                        <th>Từ vựng</th>
+                                        <th>Phiên âm</th>
+                                        <th>Loại từ</th>
+                                        <th>Nghĩa</th>
+                                        <th>Audio</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="vocab-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal để xem ảnh lớn -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img-enlarged">
+    </div>
+
+    <script src="study.js"></script>
+</body>
+</html>

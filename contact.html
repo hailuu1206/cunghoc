@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cùng Học - Liên Hệ & Góp Ý</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                    <span>CÙNG HỌC</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" data-title="Trang chủ">Trang chủ</a>
+                <a href="study.html" data-title="Học tập">Học tập</a>
+                <a href="quiz.html" data-title="Trắc nghiệm">Trắc nghiệm</a>
+                <a href="contact.html" data-title="Liên hệ" class="active">Liên hệ</a>
+            </nav>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Tìm kiếm tài liệu...">
+            </div>
+            <div class="header-actions">
+                <a href="login.html" class="login-btn">Đăng nhập</a>
+                <a href="profile.html" class="user-avatar-link">
+                    <div class="user-avatar">
+                    <img src="hailuu.jpg" alt="AVATAR">
+                </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="contact-section fade-element visible">
+            <div class="contact-header">
+                <span class="sub-label">LIÊN HỆ</span>
+                <h2>Gửi góp ý cho chúng tôi</h2>
+                <p>Ý kiến của bạn giúp hệ thống "Cùng Học" ngày càng hoàn thiện hơn. Hãy chia sẻ trải nghiệm hoặc những vấn đề bạn đang gặp phải nhé!</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-grid-wrapper">
+         
+                    <div class="contact-info-sidebar">
+                        <div class="info-card">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Địa chỉ</h4>
+                                <p>Hà Tĩnh, Việt Nam</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Hotline</h4>
+                                <p>0888 888 888</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>support@cunghoc.com</p>
+                            </div>
+                        </div>
+                        <div class="info-socials">
+                            <h4>Kết nối với chúng tôi</h4>
+                            <div class="social-icons">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-zalo"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+            
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Họ và tên</label>
+                                <input type="text" id="fullName" placeholder="Nhập tên">
+                                <span class="error-msg" id="nameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại</label>
+                                <input type="text" id="phone" placeholder="Số điện thoại">
+                                <span class="error-msg" id="phoneError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email liên hệ</label>
+                            <input type="email" id="email" placeholder="email@example.com">
+                            <span class="error-msg" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Chủ đề</label>
+                            <select id="subject">
+                                <option value="">-- Chọn chủ đề --</option>
+                                <option value="gop-y">Góp ý tính năng</option>
+                                <option value="bao-loi">Báo lỗi kỹ thuật</option>
+                                <option value="hop-tac">Hợp tác</option>
+                                <option value="khac">Khác</option>
+                            </select>
+                            <span class="error-msg" id="subjectError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Nội dung chi tiết</label>
+                            <textarea id="message" rows="4" placeholder="Nhập nội dung bạn muốn gửi..."></textarea>
+                            <span class="error-msg" id="messageError"></span>
+                        </div>
+
+                        <button type="submit" class="register-btn" style="width: 100%;">Gửi thông điệp <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column brand-info">
+                <div class="footer-logo">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>CÙNG HỌC</span>
+                </div>
+                <p>Hệ thống học tập thông minh giúp bạn chinh phục các kỳ thi THPT, IELTS và TOEIC một cách hiệu quả nhất thông qua lộ trình cá nhân hóa.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/12th01.nhl" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@KhoaiLangThang" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>VỀ CHÚNG TÔI</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Thành viên nhóm</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>LỘ TRÌNH HỌC</h4>
+                <ul>
+                    <li><a href="study.html?target=exam-thpt">Ôn thi THPT QG</a></li>
+                    <li><a href="study.html?target=ielts-vocab">Luyện thi IELTS</a></li>
+                    <li><a href="study.html?target=toeic-vocab">Luyện thi TOEIC</a></li>
+                    <li><a href="study.html?target=ipa-pronunciation">Tiếng Anh giao tiếp</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>LIÊN HỆ</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-phone"></i> 0888888888</li>
+                    <li><i class="fa-solid fa-envelope"></i> cunghoc@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Hà Tĩnh, Việt Nam</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CungHoc.com - Phát triển bởi Nhóm Dự Án Ba Anh Em</p>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

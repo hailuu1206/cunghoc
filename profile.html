@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cùng Học - Hồ Sơ Cá Nhân</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style-quiz.css">
+    <link rel="stylesheet" href="style-profile.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                    <span>CÙNG HỌC</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container profile-app">
+        <aside class="sidebar-user">
+            <div class="user-info-card">
+                <div class="profile-avatar">
+                    <img src="hailuu.jpg" alt="User">
+                </div>
+                <h3>Lưu Hải</h3>
+                <p>Học viên xuất sắc</p>
+                
+                <div class="user-details">
+                    <div class="detail-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hailuu@example.com</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>Tham gia: 01/01/2023</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Hà Tĩnh, Việt Nam</span>
+                    </div>
+                </div>
+                
+                <div class="achievement-badges">
+                    <h4>Thành tích đạt được</h4>
+                    <div class="badges-grid">
+                        <div class="badge-item active" title="Hoàn thành 5 bài quiz"><i class="fa-solid fa-fire-alt"></i></div>
+                        <div class="badge-item active" title="Đạt điểm tuyệt đối"><i class="fa-solid fa-trophy"></i></div>
+                        <div class="badge-item" title="Học tập 7 ngày liên tiếp"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div class="badge-item" title="Chuyên gia từ vựng"><i class="fa-solid fa-book"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-mini">
+                <div class="stat-box">
+                    <span class="val" id="total-quizzes">0</span>
+                    <span class="lbl">Bài đã làm</span>
+                </div>
+                <div class="stat-box">
+                    <span class="val" id="avg-score">0%</span>
+                    <span class="lbl">Tỷ lệ đúng</span>
+                </div>
+            </div>
+            <button class="btn-settings"><i class="fa-solid fa-gear"></i> Cài đặt tài khoản</button>
+        </aside>
+
+        <section class="profile-main">
+            <div class="overview-cards">
+                <div class="overview-card">
+                    <div class="card-icon blue"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <div class="card-info">
+                        <span class="label">Thời gian học</span>
+                        <span class="value">12.5 giờ</span>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon orange"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="card-info">
+                        <span class="label">Streak hiện tại</span>
+                        <span class="value">5 Ngày</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-header">
+                <h2><i class="fa-solid fa-chart-line"></i> Bảng điểm & Thành tích</h2>
+                <button id="clear-history" class="btn-clear"><i class="fa-solid fa-trash-can"></i> Xóa lịch sử</button>
+            </div>
+            
+            <div class="history-table-container">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Môn học</th>
+                            <th>Ngày thực hiện</th>
+                            <th>Kết quả</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-body">
+              
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="profile.js"></script>
+</body>
+</html>

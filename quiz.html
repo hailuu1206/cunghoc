@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cùng Học - Trắc Nghiệm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-quiz.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                    <span>CÙNG HỌC</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" data-title="Trang chủ">Trang chủ</a>
+                <a href="study.html" data-title="Học tập">Học tập</a>
+                <a href="quiz.html" class="active" data-title="Trắc nghiệm">Trắc nghiệm</a>
+                <a href="contact.html" data-title="Liên hệ">Liên hệ</a>
+            </nav>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Tìm kiếm tài liệu, khóa học...">
+            </div>
+            <div class="header-actions">
+                <div class="placeholder-icon-book">
+                    <a href="login.html" data-title="Đăng nhập" class="login-btn">Đăng nhập</a>
+                </div>
+                <div class="user-avatar">
+                    <a href="profile.html">
+                        <img src="hailuu.jpg" alt="AVATAR">
+                    </a>
+                </div> 
+            </div>
+        </div>
+    </header>
+
+    <div class="quiz-app">
+        <main class="main-content">
+            <div class="container-quiz">
+                <div class="quiz-header fade-element visible">
+                    <div class="header-main-info">
+                        <span class="sub-label">LUYỆN TẬP</span>
+                        <h2 id="current-title">Luyện tập Ngữ pháp</h2>
+                    </div>
+                </div>
+                <p id="quiz-desc" class="quiz-desc">Chọn đáp án đúng nhất cho mỗi câu hỏi bên dưới.</p>
+
+                <div class="quiz-progress-container">
+                    <div class="progress-info">
+                        <span id="progress-text">Câu 1/10</span>
+                        <span id="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+ 
+                <div class="quiz-timer" id="quiz-timer" style="display: none;">
+                    <i class="fa-solid fa-clock"></i>
+                    <span id="timer-display">15:00</span>
+                </div>
+
+                <div id="result-summary" class="result-summary" style="display: none;">
+                    <div class="result-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="result-info">
+                        <h3>Chúc mừng bạn!</h3>
+                        <p>Bạn đã hoàn thành bài kiểm tra.</p>
+                        <div id="score-text" class="final-score">0/0</div>
+                    </div>
+                    <div class="result-actions">
+                        <button id="btn-review" class="btn-nav secondary"><i class="fa-solid fa-magnifying-glass"></i> Xem lại bài làm</button>
+                        <button onclick="location.reload()" class="btn-restart">Làm lại bài mới</button>
+                    </div>
+                </div>
+
+                <div id="question-area"></div>
+
+                <div class="quiz-controls" id="quiz-controls">
+                    <button id="btn-prev" class="btn-nav secondary"><i class="fa-solid fa-chevron-left"></i> Câu trước</button>
+                    <button id="btn-reveal" class="btn-nav warning"><i class="fa-solid fa-eye"></i> Hiện đáp án</button>
+                    <button id="btn-next" class="btn-nav primary">Câu tiếp theo <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <div class="menu-item active" data-module="grammar" data-desc="Củng cố kiến thức ngữ pháp từ cơ bản đến nâng cao."><i class="fa-solid fa-book"></i> Ngữ pháp</div>
+                <div class="menu-item" data-module="vocabulary" data-desc="Mở rộng vốn từ vựng theo các chủ đề thông dụng."><i class="fa-solid fa-language"></i> Từ vựng</div>
+                <div class="menu-item" data-module="reading" data-desc="Rèn luyện kỹ năng đọc hiểu và phân tích văn bản."><i class="fa-solid fa-book-open"></i> Đọc hiểu</div>
+                <div class="menu-item" data-module="listening" data-desc="Luyện nghe với các đoạn hội thoại thực tế."><i class="fa-solid fa-headphones"></i> Luyện nghe</div>
+                <div class="menu-item" data-module="pronunciation" data-desc="Nhận diện trọng âm và cách phát âm chuẩn IPA."><i class="fa-solid fa-microphone-lines"></i> Phát âm</div>
+                <div class="menu-item" data-module="idioms" data-desc="Học các thành ngữ và cụm từ hay dùng."><i class="fa-solid fa-lightbulb"></i> Thành ngữ</div>
+                <div class="menu-item highlight" data-module="full-test" data-desc="Bài kiểm tra tổng hợp 50 câu hỏi như đề thi thật."><i class="fa-solid fa-stopwatch"></i> Thi thử</div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>VỀ CHÚNG TÔI</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Thành viên nhóm</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>LỘ TRÌNH HỌC</h4>
+                <ul>
+                    <li><a href="study.html?target=exam-thpt">Ôn thi THPT QG</a></li>
+                    <li><a href="study.html?target=ielts-vocab">Luyện thi IELTS</a></li>
+                    <li><a href="study.html?target=toeic-vocab">Luyện thi TOEIC</a></li>
+                    <li><a href="study.html?target=ipa-pronunciation">Tiếng Anh giao tiếp</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>LIÊN HỆ</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-phone"></i> 0888888888</li>
+                    <li><i class="fa-solid fa-envelope"></i> cunghoc@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Hà Tĩnh, Việt Nam</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CungHoc.com - Phát triển bởi Nhóm Dự Án Ba Anh Em</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

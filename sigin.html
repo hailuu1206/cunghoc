@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký tài khoản</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* body {
+      font-family: Arial, sans-serif;
+      background: url("images/bg.jpg") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    } */
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .register-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      width: 350px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #666;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .back-link:hover {
+      color: #1a4d77;
+    }
+
+    .register-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .register-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .register-container button {
+      width: 100%;
+      padding: 12px;
+      background: #1a4d77;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .register-container button:hover {
+      background: #45a049;
+    }
+
+    .social-login {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .social-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      color: white;
+    }
+
+    .facebook-btn {
+      background: #3b5998;
+    }
+
+    .facebook-btn:hover {
+      background: #2d4373;
+    }
+
+    .google-btn {
+      background: #db4437;
+    }
+
+    .google-btn:hover {
+      background: #c23321;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: #146ae1;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    .error {
+      color: red;
+      font-size: 13px;
+      margin-top: -5px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Quay lại trang chủ</a>
+    <h2>Đăng ký tài khoản</h2>
+    <form id="registerForm">
+      <input type="text" id="name" placeholder="Họ và tên" required>
+      <div id="nameError" class="error"></div>
+
+      <input type="email" id="email" placeholder="Email" required>
+      <div id="emailError" class="error"></div>
+
+      <input type="password" id="password" placeholder="Mật khẩu" required>
+      <div id="passwordError" class="error"></div>
+
+      <input type="password" id="confirmPassword" placeholder="Xác nhận mật khẩu" required>
+      <div id="confirmError" class="error"></div>
+
+      <button type="submit">Đăng ký</button>
+    </form>
+
+    <!-- Đăng ký bằng MXH -->
+    <div class="social-login">
+      <button class="social-btn facebook-btn">Đăng ký bằng Facebook</button>
+      <button class="social-btn google-btn">Đăng ký bằng Google</button>
+    </div>
+
+    <div class="login-link">
+      Đã có tài khoản? <a href="login.html">Đăng nhập</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("registerForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      let valid = true;
+      document.querySelectorAll(".error").forEach(e => e.textContent = "");
+
+      const name = document.getElementById("name").value.trim();
+      if (name.length < 3) {
+        document.getElementById("nameError").textContent = "Tên phải có ít nhất 3 ký tự";
+        valid = false;
+      }
+
+      const email = document.getElementById("email").value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById("emailError").textContent = "Email không hợp lệ";
+        valid = false;
+      }
+
+      const password = document.getElementById("password").value;
+      if (password.length < 6) {
+        document.getElementById("passwordError").textContent = "Mật khẩu phải có ít nhất 6 ký tự";
+        valid = false;
+      }
+
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      if (confirmPassword !== password) {
+        document.getElementById("confirmError").textContent = "Mật khẩu xác nhận không khớp";
+        valid = false;
+      }
+
+      if (valid) {
+        alert("Đăng ký thành công!");
+        form.reset();
+      }
+    });
+
+    // Giả lập click Facebook/Google
+    document.querySelector(".facebook-btn").addEventListener("click", () => {
+      alert("Chuyển hướng đến đăng ký bằng Facebook...");
+    });
+
+    document.querySelector(".google-btn").addEventListener("click", () => {
+      alert("Chuyển hướng đến đăng ký bằng Google...");
+    });
+  </script>
+</body>
+</html>

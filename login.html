@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 360px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #666;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .back-link:hover {
+      color: #1a4d77;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      animation: slideDown 1s ease;
+    }
+
+    .input-group {
+      position: relative;
+      margin: 10px 0;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #74ebd5;
+      box-shadow: 0 0 8px rgba(116,235,213,0.6);
+      transform: scale(1.02);
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .forgot-link {
+      text-align: right;
+      margin-top: 5px;
+    }
+
+    .forgot-link a {
+      color: #DB4437;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    .forgot-link a:hover {
+      text-decoration: underline;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background: #1a4d77;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .login-box button:hover {
+      background: #00bf20;
+      transform: translateY(-2px);
+    }
+
+    .social-login {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .social-login button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .social-login .icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Google: đỏ */
+    .google-btn {
+      background: #DB4437;
+      color: #fff;
+    }
+    .google-btn:hover {
+      background: #C23321;
+    }
+
+    /* Facebook: xanh */
+    .facebook-btn {
+      background: #4267B2;
+      color: #fff;
+    }
+    .facebook-btn:hover {
+      background: #365899;
+    }
+
+    .signup-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .signup-link a {
+      color: #4bb3a7;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      from {transform: translateY(-30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Quay lại trang chủ</a>
+    <h2>Welcome</h2>
+    <div class="input-group">
+      <input type="text" id="username" placeholder="Username or Email">
+    </div>
+    <div class="input-group">
+      <input type="password" id="password" placeholder="Password">
+      <span class="toggle-password" onclick="togglePassword()">👁</span>
+    </div>
+    <!-- Quên mật khẩu ngay dưới ô mật khẩu -->
+    <div class="forgot-link">
+      <a href="#">Quên mật khẩu?</a>
+    </div>
+
+    <button onclick="login()">Start</button>
+
+    <div class="social-login">
+      <p>— hoặc —</p>
+      <button class="google-btn" onclick="loginGoogle()">
+        <img src="picture/gg.png" alt="Google" class="icon">
+        Đăng nhập với Google
+      </button>
+      <button class="facebook-btn" onclick="loginFacebook()">
+        <img src="picture/fb.png" alt="Facebook" class="icon">
+        Đăng nhập với Facebook
+      </button>
+    </div>
+
+    <!-- Đăng ký dưới cùng -->
+    <div class="signup-link">
+      <a href="Sigin.html">Đăng ký</a>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if(user && pass) {
+        alert("Xin chào " + user + "! Bạn đã đăng nhập thành công.");
+      } else {
+        alert("Vui lòng nhập đầy đủ thông tin.");
+      }
+    }
+
+    function loginGoogle() {
+      alert("Chức năng đăng nhập Google đang được mô phỏng.");
+    }
+
+    function loginFacebook() {
+      alert("Chức năng đăng nhập Facebook đang được mô phỏng.");
+    }
+
+    function togglePassword() {
+      const passwordField = document.getElementById('password');
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+      } else {
+        passwordField.type = "password";
+      }
+    }
+  </script>
+</body>
+</html>

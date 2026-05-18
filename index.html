@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cùng Học - Trang Chủ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                    <span>CÙNG HỌC</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="active" data-title="Trang chủ">Trang chủ</a>
+                <a href="study.html" data-title="Học tập">Học tập</a>
+                <a href="quiz.html" data-title="Trắc nghiệm">Trắc nghiệm</a>
+                <a href="contact.html" data-title="Liên hệ">Liên hệ</a>
+            </nav>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Tìm kiếm tài liệu, khóa học...">
+            </div>
+            <div class="header-actions">
+                <div class="placeholder-icon-book">
+                    <a href="login.html" data-title="Đăng nhập" class="login-btn">Đăng nhập</a>
+                </div>
+                <div class="user-avatar">
+                    <a href="profile.html">
+                        <img src="hailuu.jpg" alt="AVATAR">
+                    </a>
+                </div> 
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-layout fade-element">
+            <div class="hero-item">
+                <div class="image-node" id="heroImageContainer">
+                    <img src="picture/giphy.gif" alt="English Learning Animation" id="heroImg"> 
+                    <div class="change-img-overlay">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Đổi ảnh</span>
+                    </div>
+                    <input type="file" id="imageUpload" hidden accept="image/*">
+                </div>
+            </div>
+            
+            <div class="hero-item">
+                <div class="stat-card">
+                    <div class="stat-header">THÀNH TỰU CHUNG</div>
+                    <div class="stat-body">
+                        <div class="s-item"><strong>1.2K+</strong> <span>Học viên</span></div>
+                        <div class="s-item"><strong>45K+</strong> <span>Câu hỏi đã giải</span></div>
+                    </div>
+                    <div class="stat-footer">Cùng nhau tiến bộ mỗi ngày!</div>
+                </div>
+            </div>
+
+            <div class="hero-item">
+                <div class="streak-card">
+                    <div class="streak-title">
+                        <i class="fa-solid fa-fire"></i> CHUỖI NGÀY HỌC
+                    </div>
+                    <div class="streak-main">
+                        <span class="val">5</span> <span class="unit">ngày</span>
+                    </div>
+                    <div class="streak-week">
+                        <div class="s-day"><span>T3</span></div>
+                        <div class="s-day"><span>T4</span></div>
+                        <div class="s-day active"><i class="fa-solid fa-fire"></i><span>T5</span></div>
+                        <div class="s-day"><span>T6</span></div>
+                        <div class="s-day"><span>T7</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-item">
+                <div class="mini-actions">
+                    <div class="m-card" data-target="vocab-3000">
+                        <div class="m-icon blue"><i class="fa-solid fa-plus"></i></div>
+                        <div class="m-text">
+                            <h4>Thêm từ</h4>
+                            <p>Tạo từ vựng cá nhân</p>
+                        </div>
+                        <i class="fa-solid fa-angle-right arrow"></i>
+                    </div>
+                    <div class="m-card" data-target="beginner-guide">
+                        <div class="m-icon green"><i class="fa-solid fa-users"></i></div>
+                        <div class="m-text">
+                            <h4>Cộng đồng</h4>
+                            <p>Chọn Fb hoặc Zalo</p>
+                        </div>
+                        <i class="fa-solid fa-angle-right arrow"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="discovery-section fade-element">
+            <div class="promo-content">
+                <div class="promo-text">
+                    <span class="sub-label">VỀ CHÚNG TÔI</span>
+                    <h2>Hơn cả một trang web học tập</h2>
+                    <p>Chúng tôi xây dựng một môi trường nơi bạn không chỉ "học" mà còn được "trải nghiệm" ngôn ngữ thông qua các hoạt động tương tác, cộng đồng hỗ trợ và kho tài liệu khổng lồ.</p>
+                    <div class="promo-features">
+                        <div class="feature-item"><i class="fa-solid fa-check text-orange"></i> Lộ trình cá nhân hóa</div>
+                        <div class="feature-item"><i class="fa-solid fa-check text-orange"></i> Tương tác thời gian thực</div>
+                        <div class="feature-item"><i class="fa-solid fa-check text-orange"></i> Hoàn toàn miễn phí</div>
+                    </div>
+                </div>
+                <div class="promo-experience">
+                    <div class="exp-card" data-target="beginner-guide">
+                        <div class="exp-icon">🎙️</div>
+                        <h4>Hoạt động Trải nghiệm</h4>
+                        <p>Tham gia Câu lạc bộ nói tiếng Anh vào tối thứ 7 hàng tuần cùng giáo viên bản ngữ.</p>
+                        <button class="register-btn">Đăng ký tham gia 💕</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="extra-resources">
+                <div class="resource-header">
+                    <h3>Sách & Bài học nổi bật</h3>
+                    <a href="javascript:void(0)" class="view-all-link" data-target="beginner-guide">Khám phá kho thư viện <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-item" data-target="beginner-path">
+                        <span class="res-tag e-book">E-BOOK</span>
+                        <div class="res-icon">📕</div>
+                        <h4>Sổ tay Ngữ pháp 2024</h4>
+                        <p>Tóm tắt toàn bộ cấu trúc câu quan trọng trong kỳ thi THPT Quốc gia.</p>
+                    </div>
+                    <div class="resource-item" data-target="vocab-3000">
+                        <span class="res-tag lesson">BÀI HỌC</span>
+                        <div class="res-icon">💡</div>
+                        <h4>Mẹo ghi nhớ 3000 từ</h4>
+                        <p>Phương pháp liên tưởng giúp bạn nhớ từ vựng lâu hơn gấp 3 lần.</p>
+                    </div>
+                    <div class="resource-item" data-target="exam-dgnl">
+                        <span class="res-tag event">SỰ KIỆN</span>
+                        <div class="res-icon">🏆</div>
+                        <h4>Đấu trường Tiếng Anh</h4>
+                        <p>Cuộc thi trực tuyến nhận phần thưởng là các đầu sách ngoại văn hay.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN MỚI: BẢNG XẾP HẠNG & TIN TỨC -->
+        <section class="dashboard-extra fade-element">
+            <div class="ranking-container">
+                <div class="section-header">
+                    <h3><i class="fa-solid fa-medal text-orange"></i> Bảng Xếp Hạng Tuần</h3>
+                </div>
+                <div class="ranking-list">
+                    <div class="rank-item top-1">
+                        <span class="rank-num">1</span>
+                        <img src="hailuu.jpg" alt="User">
+                        <span class="rank-name">Lưu Hải</span>
+                        <span class="rank-pts">2,450 LP</span>
+                    </div>
+                    <div class="rank-item">
+                        <span class="rank-num">2</span>
+                        <div class="rank-avatar-placeholder">NH</div>
+                        <span class="rank-name">Nguyễn Hùng</span>
+                        <span class="rank-pts">2,100 LP</span>
+                    </div>
+                    <div class="rank-item">
+                        <span class="rank-num">3</span>
+                        <div class="rank-avatar-placeholder">TA</div>
+                        <span class="rank-name">Tuấn Anh</span>
+                        <span class="rank-pts">1,850 LP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-container">
+                <div class="section-header">
+                    <h3><i class="fa-solid fa-bullhorn text-orange"></i> Thông Báo Mới</h3>
+                </div>
+                <div class="news-list">
+                    <div class="news-item">
+                        <span class="news-date">Hôm nay</span>
+                        <p>Cập nhật bộ đề thi thử THPTQG 2026 mới nhất.</p>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">2 ngày trước</span>
+                        <p>Sự kiện "Đấu trường từ vựng" sẽ bắt đầu vào tối Thứ 7.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="path-section beginner-theme fade-element">
+            <div class="path-header">
+                <h2><i class="fa-solid fa-seedling"></i> Dành Cho Người Mới <span class="badge">Bắt đầu từ số 0</span></h2>
+                <p class="section-desc">Lộ trình được thiết kế đặc biệt giúp bạn lấy lại gốc và làm quen với ngôn ngữ một cách tự nhiên nhất.</p>
+            </div>
+            <div class="path-grid">
+                <div class="card" data-target="beginner-course-root">
+                    <h3>Khóa học: Lấy lại gốc Tiếng Anh</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 20 bài học</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>0/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:50%;"></div></div>
+                </div>
+                <div class="card" data-target="ipa-pronunciation">
+                    <h3>Phát âm chuẩn IPA Quốc Tế</h3>
+                    <div class="meta"><i class="fa-solid fa-volume-high"></i> 44 âm cơ bản</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>1/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:10%;"></div></div>
+                </div>
+                <div class="card" data-target="vocab-3000">
+                    <h3>1000 Từ vựng thông dụng nhất</h3>
+                    <div class="meta"><i class="fa-solid fa-layer-group"></i> 10 chủ đề</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>1/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:0%;"></div></div>
+                </div>
+                <div class="card" data-target="beginner-path">
+                    <h3>Ngữ pháp cơ bản (A1 - A2)</h3>
+                    <div class="meta"><i class="fa-solid fa-pen-nib"></i> 15 cấu trúc</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>1/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:0%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="path-section thpt-theme fade-element">
+            <div class="path-header">
+                <h2><i class="fa-solid fa-graduation-cap"></i> THPT <span class="badge">10 lộ trình</span></h2>
+            </div>
+            <div class="path-grid">
+                <div class="card" data-target="exam-thpt">
+                    <h3>Luyện thi HSA - VACT</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 29 bộ từ</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>1/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:20%;"></div></div>
+                </div>
+                <div class="card" data-target="exam-thpt">
+                    <h3>Anh 10 Global Success</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 10 bộ từ</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>1/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:15%;"></div></div>
+                </div>
+                <div class="card" data-target="exam-thpt">
+                    <h3>Anh 11 Global Success</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 9 bộ từ</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>2/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:5%;"></div></div>
+                </div>
+                <div class="card" data-target="exam-thpt">
+                    <h3>Anh 12 Global Success</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 15 bộ từ</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>3/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:0%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="path-section ielts-theme fade-element">
+            <div class="path-header">
+                <h2><i class="fa-solid fa-earth-americas"></i> Sách IELTS <span class="badge">8 lộ trình</span></h2>
+            </div>
+            <div class="path-grid">
+                <div class="card" data-target="ielts-vocab">
+                    <h3>Vocabulary In Use Elementary</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 50 bộ từ</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>1/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:10%;"></div></div>
+                </div>
+                <div class="card" data-target="ielts-vocab">
+                    <h3>Cambridge Practice IELTS (18-20)</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 30 bộ từ</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>4/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:75%;"></div></div>
+                </div>
+                <div class="card" data-target="ielts-vocab">
+                    <h3>Vocabulary in Use - Advanced</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 101 bộ từ</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>4/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:40%;"></div></div>
+                </div>
+                <div class="card" data-target="ielts-vocab">
+                    <h3>IELTS theo chủ đề</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 107 vựng</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>2/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:20%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="path-section toeic-theme fade-element">
+            <div class="path-header">
+                <h2><i class="fa-solid fa-briefcase"></i> TOEIC <span class="badge">6 lộ trình</span></h2>
+            </div>
+            <div class="path-grid">
+                <div class="card" data-target="toeic-vocab">
+                    <h3>TOEIC 0-500+</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 50 bộ từ</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>2/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:10%;"></div></div>
+                </div>
+                <div class="card" data-target="toeic-vocab">
+                    <h3>HACKERS TOEIC VOCAB</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 30 bộ từ</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>3/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:5%;"></div></div>
+                </div>
+                <div class="card" data-target="toeic-vocab">
+                    <h3>ETS 2026 VOCABULARY</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 20 bộ từ</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>3/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:0%;"></div></div>
+                </div>
+                <div class="card" data-target="toeic-vocab">
+                    <h3>TOEIC Listening Practice</h3>
+                    <div class="meta"><i class="fa-solid fa-book-bookmark"></i> 22 bộ từ</div>
+                    <div class="diff"><span>ĐỘ KHÓ</span> <span>4/5</span></div>
+                    <div class="p-bar"><div class="p-fill" style="width:0%;"></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column brand-info">
+                <div class="footer-logo">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>CÙNG HỌC</span>
+                </div>
+                <p>Hệ thống học tập thông minh giúp bạn chinh phục các kỳ thi THPT, IELTS và TOEIC một cách hiệu quả nhất.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/12th01.nhl" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@KhoaiLangThang" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>VỀ CHÚNG TÔI</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Thành viên nhóm</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>LỘ TRÌNH HỌC</h4>
+                <ul>
+                    <li><a href="#">Ôn thi THPT QG</a></li>
+                    <li><a href="#">Luyện thi IELTS</a></li>
+                    <li><a href="#">Luyện thi TOEIC</a></li>
+                    <li><a href="#">Tiếng Anh giao tiếp</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>LIÊN HỆ</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-phone"></i> 0888888888</li>
+                    <li><i class="fa-solid fa-envelope"></i> cunghoc@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Hà Tĩnh, Việt Nam</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CungHoc.com - Phát triển bởi Nhóm Dự Án Ba Anh Em</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
